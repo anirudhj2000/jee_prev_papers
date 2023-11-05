@@ -9,7 +9,7 @@ import {
   FlatList,
 } from 'react-native';
 import React, {useEffect} from 'react';
-import {RootScreenStackProps} from '../utils/types';
+import {RootScreenStackProps, MainStackScreenProps} from '../utils/types';
 import {colors} from '../utils/colors';
 import {ExamYearsData} from '../utils/consts';
 import Accordion from '../components/accordion';
@@ -17,7 +17,7 @@ import Icon from 'react-native-vector-icons/AntDesign';
 
 const {height, width} = Dimensions.get('window');
 
-const Home = ({navigation}: RootScreenStackProps<'Home'>) => {
+const Home = ({navigation}: MainStackScreenProps<'Home'>) => {
   const [refresh, setRefresh] = React.useState(false);
   const [examList, setExamList] = React.useState<Array<any>>([]);
 
@@ -44,7 +44,7 @@ const Home = ({navigation}: RootScreenStackProps<'Home'>) => {
               <Accordion
                 key={index}
                 visible={item.visible}
-                title={item.year + ' #' + (index+1)}
+                title={item.year + ' #' + (index + 1)}
                 toggleButton={() => {
                   let list = [...examList];
                   list[index].visible = !list[index].visible;

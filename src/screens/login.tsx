@@ -66,7 +66,7 @@ const Login = ({navigation}: RootScreenStackProps<'Login'>) => {
             source={require('../assets/googlelogo.png')}
             title={'Sign in with google'}
             onPress={() => {
-              navigation.navigate('Home');
+              navigation.navigate('MainStack', {screen: 'Home'});
             }}
           />
         </View>
