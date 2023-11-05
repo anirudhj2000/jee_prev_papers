@@ -3,7 +3,7 @@ import {Dimensions, View, Text} from 'react-native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Home from '../screens/home';
 import Challenges from '../screens/challenges';
-import Profile from '../screens/Profile';
+import Profile from '../screens/profile';
 import {MainStackProps} from '../utils/types';
 import Icon from 'react-native-vector-icons/Entypo';
 
