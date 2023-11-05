@@ -28,7 +28,9 @@ const AuthButton = ({title, source, onPress}: AuthButtonInterface) => {
         borderRadius: 8,
       }}>
       <Image source={source} style={{height: 24, width: 24}} />
-      <Text style={{fontSize: 14, marginLeft: '5%'}}>{title}</Text>
+      <Text style={{fontSize: 14, marginLeft: '5%', color: '#121212'}}>
+        {title}
+      </Text>
     </TouchableOpacity>
   );
 };

@@ -10,6 +10,7 @@ import {
 import React from 'react';
 import {RootScreenStackProps} from '../utils/types';
 import AuthButton from '../components/authButton';
+import {colors} from '../utils/colors';
 
 const {height, width} = Dimensions.get('window');
 
@@ -18,7 +19,7 @@ const Login = ({navigation}: RootScreenStackProps<'Login'>) => {
     <SafeAreaView
       style={{
         height: height,
-        backgroundColor: '#100121',
+        backgroundColor: colors.backgroundPrimary,
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
@@ -44,18 +45,18 @@ const Login = ({navigation}: RootScreenStackProps<'Login'>) => {
             style={{
               height: 1,
               borderBottomWidth: 1,
-              borderColor: '#c7c7c7',
+              borderColor: colors.lightGrey,
               width: '35%',
             }}
           />
-          <Text style={{color: '#c7c7c7', fontStyle: 'italic'}}>
+          <Text style={{color: colors.lightGrey, fontStyle: 'italic'}}>
             Login with
           </Text>
           <View
             style={{
               height: 1,
               borderBottomWidth: 1,
-              borderColor: '#c7c7c7',
+              borderColor: colors.lightGrey,
               width: '35%',
             }}
           />
