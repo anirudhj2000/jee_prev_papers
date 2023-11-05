@@ -1,10 +1,26 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  SafeAreaView,
+  TouchableOpacity,
+  Dimensions,
+} from 'react-native';
 import React from 'react';
+import {RootScreenStackProps} from '../utils/types';
 
-const Home = () => {
+const {height, width} = Dimensions.get('window');
+
+const Home = ({navigation}: RootScreenStackProps<'Home'>) => {
   return (
     <View>
-      <Text>Home</Text>
+      <TouchableOpacity
+        onPress={() => {
+          navigation.navigate('Login');
+        }}>
+        <Text>Home</Text>
+      </TouchableOpacity>
     </View>
   );
 };
